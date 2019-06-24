@@ -2,12 +2,26 @@ from Manip import carveDemo
 import tkinter
 import cv2
 import PIL.Image, PIL.ImageTk
+
 from Manip.seamCarve import *
 from tkinter import *
 import PIL
 import cv2
 
-PATH = './Sample/boat2.jpg'
+PATH = './Sample/pika.png'
+
+# def consecutiveCarve(iterPeriod):
+#     img = cv2.normalize(cv2.imread(PATH), None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
+#     while True:
+#         for i in range(iterPeriod):
+#             img = carve_column(carve_row(img))
+#         cv2.imshow("sample", img)
+#
+#         if cv2.waitKey(1) & 0xFF == ord('q'):
+#             break
+#
+#
+# consecutiveCarve(1)
 
 root = Tk()
 frame = Frame(root)
@@ -75,3 +89,4 @@ convertb.grid(row=4, column=0, pady=(15, 0), padx=(0, 0), sticky=N)
 convertb.config(bg="#c1d8ff")
 
 root.mainloop()
+
